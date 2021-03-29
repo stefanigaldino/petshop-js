@@ -29,7 +29,7 @@ let pets = [{
     raca: "Oriental",
     peso: 3,
     tutor: "Zé",
-    vacinado: true,
+    vacinado: false,
     contato: "(99)99999-9999",
     servico: ['consulta'] 
 }
@@ -43,10 +43,17 @@ const listarPets = () => { // arrow function
     }
 }
 
-const vacinarPet = () => {
-
-    
+const vacinarPet = (pet) => {
+    if (pet.vacinado = true) {
+        console.log(`O pet ${pet.nome} encontra-se vacinado!`) 
+    } 
+        else { 
+            console.log(`Atenção, ${pet.nome} já foi vacinado!`)        
+    }
 }
 
-listarPets();
+
+    
+vacinarPet(pets[1]);
+//listarPets();
 // console.log(pets);
