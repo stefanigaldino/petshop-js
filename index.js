@@ -35,11 +35,17 @@ let pets = [{
 }
 ];
 
-// arrow function 
-const listarPets = () => {
-    for(let i = 0; i < pets.length; i++){
-        console.log(pets[i].nome);
+const listarPets = () => { // arrow function 
+    //for(let i = 0; i < pets.length; i++){
+        //console.log(pets[i].nome);
+        for (let pet of pets){
+            console.log(`${pet.nome}, ${pet.idade}, ${pet.raca}`); //template string
     }
+}
+
+const vacinarPet = () => {
+
+    
 }
 
 listarPets();
