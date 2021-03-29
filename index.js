@@ -35,13 +35,35 @@ let pets = [{
 }
 ];
 
-const listarPets = () => { // arrow function 
-    //for(let i = 0; i < pets.length; i++){
-        //console.log(pets[i].nome);
-        for (let pet of pets){
-            console.log(`${pet.nome}, ${pet.idade}, ${pet.raca}`); //template string
+// const listarPets = () => { // arrow function 
+//     //for(let i = 0; i < pets.length; i++){
+//         //console.log(pets[i].nome);
+//         for (let pet of pets){
+//             console.log(`${pet.nome}, ${pet.idade}, ${pet.raca}`); //template string
+//     }
+// }
+
+const listarPets = () => {
+
+    for(let pet of pets){
+        console.log(`Nome do Pet: ${pet.nome}
+        Idade: ${pet.idade}
+        Tipo: ${pet.tipo}
+        Raca: ${pet.raca}`)
     }
 }
+
+const exibirPets = () => {
+
+    for(let pet of pets){
+        console.log(`O Nome do Pet: ${pet.nome},
+        Idade: ${pet.idade},
+        Tipo: ${pet.tipo},
+        Raca: ${pet.raca}.
+        ---------`)
+    }
+}
+
 
 const vacinarPet = (pet) => {
     if (pet.vacinado = true) {
@@ -52,8 +74,17 @@ const vacinarPet = (pet) => {
     }
 }
 
+const campanhaVacinacao = (pet) => {
+    let vacinados = 0
+    for (pet of pets){
+        vacinados += vacinarPet(pet)
+    }
+    console.log(vacinados)
+}
 
-    
-vacinarPet(pets[1]);
+
+campanhaVacinacao();
+//exibirPets();
+//vacinarPet(pets[1]);
 //listarPets();
 // console.log(pets);
