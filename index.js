@@ -21,7 +21,7 @@ let pets = [{
     tutor: "Neck",
     vacinado: true,
     contato: "(99)99999-9999",
-    servico: ['banho', 'tosa']
+    servico: ['tosa']
 },
 {
     nome: "Geraldhy",
@@ -40,7 +40,7 @@ const listarPets = () => { // arrow function
 //     //for(let i = 0; i < pets.length; i++){
 //         //console.log(pets[i].nome);
          for (let pet of pets){
-             console.log(`${pet.nome}, ${pet.idade}, ${pet.raca}`); //template string
+             console.log(`${pet.nome}, ${pet.idade}, ${pet.raca}, ${pet.servico}`); //template string
      }
 }
 
@@ -103,7 +103,26 @@ const adocionarNovoPet = (nome, tipo, idade, raca, peso, tutor, vacinado) => {
     pets.push(pet)
 };
 
-adocionarNovoPet("Califa", "cão", 10, "labrador", 28, "Gueu", false)
+const darBanhoPet = (pet) => {
+    let dataHoje = moment().format('DD-MM-YYYY')
+    pet.servico.push(`${'Serviço'}, ${"Banho "}, ${dataHoje}`);
+
+}
+
+const tosarPet = (pet) =>{
+    let dataHoje = moment().format('DD-MM-YYYY')
+    pet.servico.push(`${'Serviço'}, ${"Tosa "}, ${dataHoje}`);
+}
+
+const apararUnhasPet = (pets) => {
+    let dataHoje = moment().format('DD-MM-YYYY')
+    pets.servico.push(`${'Serviço:'}, ${'Aparou unhas'}, ${dataHoje}`);
+}
+
+
+//adocionarNovoPet("Califa", "cão", 10, "labrador", 28, "Gueu", false)
+apararUnhasPet(pets[1]);
+darBanhoPet(pets[2]);
 //campanhaVacinacao();
 //exibirPets();
 //vacinarPet(pets[0]);
