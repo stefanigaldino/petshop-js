@@ -1,40 +1,10 @@
 const moment = require('moment');
 const nomePetshop = "HUNTER PETSHOP";
+const bancoDados = require("./bancoDados.json");
 
-let pets = [{
-    nome: "Hunter",
-    idade: 1,
-    tipo: "Cão",
-    raca: "Sharpei",
-    peso: 20,
-    tutor: "Fani",
-    vacinado: false,
-    contato: "(99)99999-9999",
-    servico: ['banho', 'consulta']
-},
-{
-    nome: "Nalu",
-    idade: 14,
-    tipo: "Cão",
-    raca: "Husky-siberiano",
-    peso: 28,
-    tutor: "Neck",
-    vacinado: true,
-    contato: "(99)99999-9999",
-    servico: ['tosa']
-},
-{
-    nome: "Geraldhy",
-    idade: 2,
-    tipo: "gato",
-    raca: "Oriental",
-    peso: 3,
-    tutor: "Zé",
-    vacinado: false,
-    contato: "(99)99999-9999",
-    servico: ['consulta'] 
-}
-];
+
+let pets = bancoDados.pets;
+    
 
 const listarPets = () => { // arrow function 
 //     //for(let i = 0; i < pets.length; i++){
@@ -119,12 +89,12 @@ const apararUnhasPet = (pets) => {
     pets.servico.push(`${'Serviço:'}, ${'Aparou unhas'}, ${dataHoje}`);
 }
 
-
+//console.log(JSON.stringify(pets));
 //adocionarNovoPet("Califa", "cão", 10, "labrador", 28, "Gueu", false)
-apararUnhasPet(pets[1]);
-darBanhoPet(pets[2]);
+//apararUnhasPet(pets[1]);
+//darBanhoPet(pets[2]);
 //campanhaVacinacao();
 //exibirPets();
 //vacinarPet(pets[0]);
-listarPets();
-// console.log(pets);
+//listarPets();
+console.log(pets);
