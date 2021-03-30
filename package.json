@@ -1,11 +1,22 @@
 {
   "name": "petshop",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanigaldino/petshop-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stefanigaldino/petshop-js/issues"
+  },
+  "homepage": "https://github.com/stefanigaldino/petshop-js#readme",
+  "description": "",
+  "dependencies": {
+    "moment": "^2.29.1"
+  }
 }
